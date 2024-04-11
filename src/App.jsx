@@ -1,22 +1,19 @@
-import React, { useState } from 'react';
+import React from 'react';
+import TimeCard from './components/TimeCard';
+import Footer from './components/Footer';
 
 function App() {
-  const [count, setCount] = useState(0);
-
-  function increment() {
-    setCount((prev) => prev + 1);
-  }
+  const launchDate = new Date('2024-04-29');
+  // launchDate.setDate(launchDate.getDate() + 9);
 
   return (
-    <>
-      <h1>
-        Count is:
-        {count}
-      </h1>
-      <button type="button" onClick={increment}>
-        Increment
-      </button>
-    </>
+    <main>
+      <div className="wrapper">
+        <h1>we&apos;re are launching soon</h1>
+        <TimeCard launchDate={launchDate} />
+      </div>
+      <Footer />
+    </main>
   );
 }
 
