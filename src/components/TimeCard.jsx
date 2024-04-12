@@ -16,13 +16,13 @@ function TimeCard({ launchDate }) {
 
   const getTimeLeft = () => {
     // time left to launch date
-    const timeToLauch = +new Date(launchDate) - +new Date();
+    const timeLeftTillLaunch = +new Date(launchDate) - +new Date();
 
     const remainingTime = {
-      days: Math.floor(timeToLauch / (24 * 3600 * 1000)),
-      hours: Math.floor((timeToLauch / (3600 * 1000)) % 24),
-      minutes: Math.floor((timeToLauch / 1000 / 60) % 60),
-      seconds: Math.floor((timeToLauch / 1000) % 60),
+      days: Math.floor(timeLeftTillLaunch / (24 * 3600 * 1000)),
+      hours: Math.floor((timeLeftTillLaunch / (3600 * 1000)) % 24),
+      minutes: Math.floor((timeLeftTillLaunch / 1000 / 60) % 60),
+      seconds: Math.floor((timeLeftTillLaunch / 1000) % 60),
     };
 
     return remainingTime;
@@ -67,7 +67,7 @@ function TimeCard({ launchDate }) {
       <div className="time-wrapper" data-top={days}>
         <div className="card">
           <div className="top" ref={dayRef}>
-            <span className="days num">
+            <span className="days num" data-testid="days">
               {days}
             </span>
             <span className="top-back" />
@@ -86,7 +86,7 @@ function TimeCard({ launchDate }) {
       <div className="time-wrapper" data-top={hours}>
         <div className="card">
           <div className="top" ref={hourRef}>
-            <span className="num hours">
+            <span className="num hours" data-testid="hours">
               {hours}
             </span>
           </div>
@@ -103,7 +103,7 @@ function TimeCard({ launchDate }) {
       <div className="time-wrapper" data-top={minutes}>
         <div className="card">
           <div className="top" ref={minuteRef}>
-            <span className="num">
+            <span className="num" data-testid="minutes">
               {minutes}
             </span>
             <span className="top-back" />
@@ -127,6 +127,7 @@ function TimeCard({ launchDate }) {
             <span
               className="num seconds"
               data-bottom={seconds}
+              data-testid="seconds"
             >
               {seconds}
             </span>
