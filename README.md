@@ -30,8 +30,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Source code](https://github.com/ikennarichard/launch-countdown)
+- Live Site URL: [Site](https://polite-lebkuchen-3def6d.netlify.app)
 
 ## My process
 
