@@ -3,8 +3,8 @@ import TimeCard from './components/TimeCard';
 import Footer from './components/Footer';
 
 function App() {
-  const launchDate = new Date('2024-04-29');
-  // launchDate.setDate(launchDate.getDate() + 9);
+  const launchDate = new Date();
+  launchDate.setDate(launchDate.getDate() + 3);
 
   return (
     <main>
