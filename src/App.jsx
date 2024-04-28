@@ -4,7 +4,7 @@ import Footer from './components/Footer';
 
 function App() {
   const launchDate = new Date('2024-04-29');
-  // launchDate.setDate(launchDate.getDate() + 9);
+  launchDate.setDate(launchDate.getDate() + 9);
 
   return (
     <main>
